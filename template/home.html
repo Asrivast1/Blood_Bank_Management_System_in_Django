@@ -1,49 +1,73 @@
-{% extends 'home_base.html' %}
-
-
-{% block content %}
-
+{% extends 'home_base.html' %} {% block content %}
 
 <!--1st post -->
-<div class="post clearfix">
+<div class="row container mx-auto">
+  <div class="row my-3">
+    <div class="col">
+      <div class="row">
+        <div class="col col-6">
+          <img
+            src="{{ our_vision.body_img.url }}"
+            class="img-thumbnail"
+            alt="Post 1st image"
+          />
+        </div>
+        <div class="col col-6">
+          <div class="">
+            <h2 class="font-weight-bold">{{ our_vision.title }}</h2>
+            <p class="text-break">{{ our_vision.body_text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- post for image -->
-    <div class="postimg float-left">
-        <img src="{{ our_vision.body_img.url }}" class="img-thumbnail" alt="Post 1st image">
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <div class="row">
+        <div class="col col-6">
+          <div class="">
+            <h2 class="font-weight-bold">{{ donor_opinion.title }}</h2>
+            <p class="text-break text-justify">{{ donor_opinion.body_text }}</p>
+          </div>
+        </div>
+        <div class="col col-6 text-right">
+          <img
+            src="{{ donor_opinion.body_img.url }}"
+            class="img-thumbnail"
+            alt="Post 1st image"
+            width="350"
+            height="350"
+          />
+        </div>
+      </div>
     </div>
 
     <!-- post for blog -->
-    <div class="post_dec float-right">
-        <h2 class="font-weight-bold">{{ our_vision.title }}</h2>
-        <p class="text-break">{{ our_vision.body_text }}</p>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <div class="row">
+        <div class="col col-6">
+          <img
+            src="{{ user_opinion.body_img.url }}"
+            class="img-thumbnail"
+            alt="Post 1st image"
+            height="300"
+            width="300"
+          />
+        </div>
+        <div class="col col-6">
+          <div class="">
+            <h2 class="font-weight-bold">{{ user_opinion.title }}</h2>
+            <p class="text-justify">{{ user_opinion.body_text }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
-<!-- 2nd post -->
-<div class="post2 clearfix">
-    <!-- pors for image -->
-    <div class="postimg2 float-right">
-        <img src="{{ donor_opinion.body_img.url }}" class="img-thumbnail" alt="Post 1st image">
-    </div>
     <!-- post for blog -->
-    <div class="post_dec2 float-left">
-        <h2 class="font-weight-bold">{{ donor_opinion.title }}</h2>
-        <p class="text-break text-justify">{{ donor_opinion.body_text }}</p>
-    </div>
+  </div>
 </div>
-
-<!-- 3dr post -->
-<div class="post3 clearfix">
-    <!-- post for image -->
-    <div class="postimg3 float-left">
-        <img src="{{ user_opinion.body_img.url }}" class="img-thumbnail" alt="Post 1st image">
-    </div>
-    <!-- post for blog -->
-    <div class="post_dec3 float-right">
-        <h2 class="font-weight-bold">{{ user_opinion.title }}</h2>
-        <p class="text-justify">{{ user_opinion.body_text }}</p>
-    </div>
-</div>
-    
 
 {% endblock %}
-
