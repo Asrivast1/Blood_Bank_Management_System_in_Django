@@ -60,8 +60,8 @@ The Blood Bank Management System is a web application developed using Django and
    It will run on http://localhost:8000
 
 7. Admin dashboard can be accessed at http://localhost:8000/admin
-   username: admin
-   password: admin
+   * username: admin
+   * password: admin
 
 ![Admin Dashboard](https://github.com/Asrivast1/Blood_Bank_Management_System_in_Django/assets/56469418/f38f14b0-b78d-4a46-b590-faa88131f197)
 
